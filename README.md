@@ -1,3 +1,15 @@
+# Math-Magicians Company - Simple Calculator Project
+Project to build a fully funcitonal, and simple, Calculator webApp for fictional Math-Magicians Co, with React, ES6, CSS and Heroku for deployment. Additional packages used:
+- [prop-types](https://www.npmjs.com/package/prop-types)
+- [big.js](https://github.com/MikeMcl/big.js/)
+- [create-react-app-buildpack](https://github.com/mars/create-react-app-buildpack) (for deployment to Heroku)
+
+## Links
+- [GitHub Repo direct Link](https://github.com/NewIncome/math-mag-co-calculator)
+- [Live :globe_with_meridians::computer: Link](https://math-mag-co-calculator.herokuapp.com/)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
