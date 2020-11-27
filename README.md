@@ -3,6 +3,7 @@ Project to build a fully funcitonal, and simple, Calculator webApp for fictional
 - [prop-types](https://www.npmjs.com/package/prop-types)
 - [big.js](https://github.com/MikeMcl/big.js/)
 - [create-react-app-buildpack](https://github.com/mars/create-react-app-buildpack) (for deployment to Heroku)
+The mars builpack uses nginx to facilitate React deployment.
 
 ## Links
 - [GitHub Repo direct Link](https://github.com/NewIncome/math-mag-co-calculator)
