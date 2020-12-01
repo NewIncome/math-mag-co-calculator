@@ -1,12 +1,13 @@
 export default function calculate(calculatorData, buttonName) {
-  let total;
-  let next;
-  const operation = '';
+  let { total, next } = calculatorData;
+  const { operation } = calculatorData;
 
   if (buttonName === '+/-') {
     total *= -1;
     next *= -1;
   }
+  if (next && buttonName === '%') next /= 100;
+  if (total && buttonName === '%') total /= 100;
 
-  return calculatorData;
+  return { total, next, operation };
 }
