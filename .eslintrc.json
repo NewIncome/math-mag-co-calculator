@@ -20,7 +20,9 @@
     "import/no-unresolved": "off",
     "no-shadow": "off",
     "arrow-parens": ["error", "as-needed"],
-    "import/no-cycle": "off"
+    "import/no-cycle": "off",
+    "no-unused-vars": "off",
+    "prefer-const": "off"
   },
   "ignorePatterns": [
     "dist/",
