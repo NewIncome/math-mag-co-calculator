@@ -29,7 +29,7 @@ class App extends React.Component {
     return (
       <>
         <Display result={this.total || this.next} />
-        <ButtonPanel OnClick={this.handleClick} />
+        <ButtonPanel onClick={this.handleClick} />
       </>
     );
   }
