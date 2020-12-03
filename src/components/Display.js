@@ -5,7 +5,8 @@ export default function Display(props) {
 
   return (
     <div className="display">
-      {result}
+      { /* to display a 0 when result==null */ }
+      {result || '0'}
     </div>
   );
 }
