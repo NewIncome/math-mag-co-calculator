@@ -1,17 +1,13 @@
 import PropTypes from 'prop-types';
 
 export default function Button(props) {
-  const { name } = props;
-
-  function handleClick(buttonName) {
-    props.onClick(buttonName);
-  }
+  const { name, onBtnClick } = props;
 
   return (
     <button
       type="button"
       id={name}
-      onClick={handleClick}
+      onClick={onBtnClick}
     >
       { name }
     </button>

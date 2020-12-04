@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 
 export default function Display(props) {
   const { result } = props;
-
+  console.log('result:');
+  console.log(result);
   return (
     <div className="display">
       {result}
@@ -10,8 +11,6 @@ export default function Display(props) {
   );
 }
 
-Display.defaultProps = { result: '0' };
-
 Display.propTypes = {
-  result: PropTypes.string,
+  result: PropTypes.string.isRequired,
 };

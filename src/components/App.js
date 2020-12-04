@@ -10,7 +10,7 @@ class App extends React.Component {
 
     this.state = {
       total: null,
-      next: null,
+      next: '0',
       operation: null,
     };
     this.handleClick = this.handleClick.bind(this);
@@ -18,20 +18,25 @@ class App extends React.Component {
 
   handleClick(buttonName) {
     let data = this.state;
+    console.log('Old data:');
+    console.log(data);
     data = Calculate(data, buttonName);
+    console.log(data, buttonName);
     const { total, next, operation } = data;
 
-    this.setState(prev => ({
-      ...prev, total, next, operation,
+    this.setState(state => ({
+      total: data.total,
+      next: data.next,
+      operation: data.operation,
     }));
   }
 
   render() {
-    const { operation, next } = this.state;
+    const { total, next, operation } = this.state;
 
     return (
       <>
-        <Display result={this.total || this.next} />
+        <Display result={total || next} />
         <ButtonPanel onClick={this.handleClick} />
       </>
     );
