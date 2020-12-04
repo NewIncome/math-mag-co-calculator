@@ -4,8 +4,6 @@ import Button from './Button';
 export default function ButtonPanel({ handleChange }) {
   const handlePnlClick = event => {
     handleChange(event.target.id);
-    console.log(event);
-    console.log(event.target.id);
   };
 
   return (
