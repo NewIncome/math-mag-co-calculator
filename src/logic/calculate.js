@@ -15,7 +15,9 @@ export default function calculate(calculatorData, buttonName) {
 
   switch (buttonName) {
     case '+/-':
-      // total *= -1;
+      if (total) {
+        total *= -1;
+      }
       next *= -1;
       next = next.toString();
       break;
@@ -33,7 +35,7 @@ export default function calculate(calculatorData, buttonName) {
     case '+':
     case '-':
     case 'X':
-    case '/':
+    case '÷':
       total = next;
       next = null;
       operation = buttonName;

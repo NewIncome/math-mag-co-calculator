@@ -10,7 +10,7 @@ export default function operate(numOne, numTwo, operation) {
       return x.minus(y).toNumber().toString();
     case 'X':
       return x.times(y).toNumber().toString();
-    case '/':
+    case '÷':
       return x.div(y).toNumber().toString();
     default:
       return '0.0';
