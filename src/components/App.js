@@ -18,7 +18,11 @@ class App extends React.Component {
 
   handleClick(buttonName) {
     let data = this.state;
+    console.log('before Data');
+    console.log(data);
     data = Calculate(data, buttonName);
+    console.log('after Data');
+    console.log(data);
     const { total, next, operation } = data;
 
     this.setState(state => ({
@@ -33,7 +37,7 @@ class App extends React.Component {
 
     return (
       <>
-        <Display result={next || total} />
+        <Display result={total !== null ? total : '0'} />
         <ButtonPanel onClick={this.handleClick} />
       </>
     );

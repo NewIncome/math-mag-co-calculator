@@ -3,18 +3,17 @@ import operate from './operate';
 export default function calculate(calculatorData, buttonName) {
   let { total, next, operation } = calculatorData;
 
+  if (operation === '=' && next === null) {
+    total = null;
+    operation = null;
+  }
+
   if (Number(buttonName)) {
     if (next === '0' || (operation && next === null) || !next) next = buttonName;
     else next += buttonName;
   }
 
   if (buttonName !== operation) {
-    if (operation && ['+', '-', 'X', '/'].includes(buttonName)) {
-      next = total;
-      total = null;
-      operation = null;
-    }
-
     switch (buttonName) {
       case '+/-' && buttonName !== 0:
         // total *= -1;
@@ -28,7 +27,8 @@ export default function calculate(calculatorData, buttonName) {
         break;
       case 'A/C':
         total = null;
-        next = '0';
+        next = null;
+        operation = null;
         break;
       case '+':
       case '-':
@@ -42,6 +42,7 @@ export default function calculate(calculatorData, buttonName) {
         if (Number(next) && Number(total)) {
           total = operate(total, next, operation);
           next = null;
+          operation = buttonName;
         }
         break;
       default:
