@@ -15,8 +15,8 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(event) {
-    this.setState({ next: event.target.name });
+  handleClick(btnName) {
+    this.setState({ next: btnName });
   }
 
   render() {
@@ -25,7 +25,7 @@ class App extends React.Component {
     return (
       <>
         <Display result={next} />
-        <ButtonPanel onClick={this.handleClick} />
+        <ButtonPanel handleChange={this.handleClick} />
       </>
     );
   }
