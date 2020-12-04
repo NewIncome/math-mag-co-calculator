@@ -37,7 +37,10 @@ class App extends React.Component {
 
     return (
       <>
-        <Display result={total !== null ? total : '0'} />
+        <Display result={
+          (total === null && next === null) ? '0' : next === null ? total : next
+          }
+        />
         <ButtonPanel onClick={this.handleClick} />
       </>
     );

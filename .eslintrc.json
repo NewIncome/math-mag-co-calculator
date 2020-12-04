@@ -23,7 +23,8 @@
     "import/no-cycle": "off",
     "no-unused-vars": "off",
     "prefer-const": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "no-nested-ternary": "off"
   },
   "ignorePatterns": [
     "dist/",
