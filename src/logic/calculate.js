@@ -1,21 +1,52 @@
-import Big from 'big.js';
+import operate from './operate';
 
 export default function calculate(calculatorData, buttonName) {
-  let { total, next, operation } = Big(calculatorData);
+  let { total, next, operation } = calculatorData;
+
+  if (operation === '=' && next === null) {
+    total = null;
+    operation = null;
+  }
+
+  if (Number(buttonName) || buttonName === '0') {
+    if (next === null) next = buttonName;
+    else next += buttonName;
+  }
 
   switch (buttonName) {
     case '+/-':
-      total *= -1;
+      if (total) {
+        total *= -1;
+      }
       next *= -1;
+      next = next.toString();
       break;
     case '%':
-      total = total.div(100);
+      next /= 100;
       break;
     case '.':
-      if (total.mod(1) === 0) total.plus('.');
+      if (next % 1 === 0) next += '.';
       break;
     case 'A/C':
-      return 0;
+      total = null;
+      next = null;
+      operation = null;
+      break;
+    case '+':
+    case '-':
+    case 'X':
+    case '÷':
+      total = next;
+      next = null;
+      operation = buttonName;
+      break;
+    case '=':
+      if (Number(next) && Number(total)) {
+        total = operate(total, next, operation);
+        next = null;
+        operation = buttonName;
+      }
+      break;
     default:
       break;
   }
