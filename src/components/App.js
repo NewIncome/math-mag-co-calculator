@@ -18,11 +18,7 @@ class App extends React.Component {
 
   handleClick(buttonName) {
     let data = this.state;
-    console.log('Old data:');
-    console.log(data);
     data = Calculate(data, buttonName);
-    console.log('NEW data:');
-    console.log(data, buttonName);
     const { total, next, operation } = data;
 
     this.setState(state => ({
