@@ -1,4 +1,4 @@
-import Big from 'big.js';
+import operate from './operate';
 
 export default function calculate(calculatorData, buttonName) {
   let { total, next, operation } = calculatorData;
@@ -11,6 +11,8 @@ export default function calculate(calculatorData, buttonName) {
   console.log(next);
   console.log('buttonName:');
   console.log(buttonName);
+  console.log(typeof buttonName);
+  console.log(buttonName === '-' ? 'MINUS!!!' : 'Fucked');
   switch (buttonName) {
     case '+/-' && buttonName !== 0:
       // total *= -1;
@@ -25,6 +27,19 @@ export default function calculate(calculatorData, buttonName) {
     case 'A/C':
       total = null;
       next = '0';
+      break;
+    case '+':
+    case '-':
+    case 'X':
+    case '/':
+      console.log('GOT INTO THE OPERATIONS!!!');
+      total = next;
+      next = '0';
+      operation = buttonName;
+      break;
+    case '=':
+      total = operate(total, next, operation);
+      next = null;
       break;
     default:
       break;

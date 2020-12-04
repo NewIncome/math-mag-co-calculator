@@ -21,6 +21,7 @@ class App extends React.Component {
     console.log('Old data:');
     console.log(data);
     data = Calculate(data, buttonName);
+    console.log('NEW data:');
     console.log(data, buttonName);
     const { total, next, operation } = data;
 
@@ -36,7 +37,7 @@ class App extends React.Component {
 
     return (
       <>
-        <Display result={total || next} />
+        <Display result={next || total} />
         <ButtonPanel onClick={this.handleClick} />
       </>
     );
