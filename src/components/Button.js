@@ -8,6 +8,7 @@ export default function Button(props) {
       type="button"
       id={name}
       onClick={onBtnClick}
+      className="btn"
     >
       { name }
     </button>
