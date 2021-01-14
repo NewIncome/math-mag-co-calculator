@@ -6,15 +6,15 @@
 }
 
 #root {
-  background-color: aquamarine;
-  background: linear-gradient(#fff, #fff) no-repeat, linear-gradient(45deg, #fff 21%, #c30c 21%, #c30e 94.5%, #fff 94.5%) no-repeat;
-  background-size: 50% 50%, 90% 90%;
+  background: linear-gradient(#fff, #fff) no-repeat, linear-gradient(45deg, #fff 21%, #c30a 21%, #c30e 91%, #fff 91%) no-repeat;
+  background-size: 50% 60%, 87% 95%;
   background-position: 20% 0%, 100% 0%;
   height: 100vh;
+  width: 1000px;
 }
 
 #cBody {
-  width: 80%;
+  width: 700px;
   margin: auto;
   height: 60vh;
 }
