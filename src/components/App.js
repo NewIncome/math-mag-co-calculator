@@ -31,19 +31,22 @@ class App extends React.Component {
     const { total, next } = this.state;
 
     return (
-      <div id="calcContainer">
-        <div id="cBody">
-          <div className="calcTop">
-            <Display result={
-              (total === null && next === null) ? '0' : next === null ? total : next
-              }
-            />
-          </div>
-          <div className="calcBtm">
-            <ButtonPanel onClick={this.handleClick} />
+      <section className="section1">
+        <p>Let&apos;s do some math!</p>
+        <div id="calcContainer">
+          <div id="cBody">
+            <div className="calcTop">
+              <Display result={
+                (total === null && next === null) ? '0' : next === null ? total : next
+                }
+              />
+            </div>
+            <div className="calcBtm">
+              <ButtonPanel onClick={this.handleClick} />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

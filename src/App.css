@@ -11,7 +11,7 @@
 #nav {
   display: flex;
   justify-content: space-between;
-  padding: 5px 20px;
+  padding: 5px 50px;
 }
 
 .logo {
@@ -30,24 +30,51 @@
 .link {
   color: #005ce6;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #0047b3;
+  text-shadow: 2px 1px 0px #bcf;
+}
+
+.section {
+  margin: 50px auto 0;
+  padding: 40px 50px 60px;
+  border: 5px double #ddd;
+  width: 93%;
+}
+
+.section1 {
+  margin: 50px auto 0;
+  padding: 40px 50px 60px;
+  border: 5px solid #f6f6f6;
+  width: 93%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 p,
-h2,
 blockquote {
   font-family: 'Bitter', serif;
+  font-size: 2em;
 }
 
-.title { font-size: 3em; }
-
-p { font-size: 2em; }
+.title {
+  font-family: 'Bitter', serif;
+  font-size: 3em;
+  margin-bottom: 40px;
+}
 
 #calcContainer {
-  background: linear-gradient(#fff, #fff) no-repeat, linear-gradient(45deg, #fff 21%, #c30a 21%, #c30e 91%, #fff 91%) no-repeat;
-  background-size: 50% 60%, 87% 95%;
-  background-position: 20% 0%, 100% 0%;
-  height: 100vh;
+  background: linear-gradient(#fff, #fff) no-repeat, linear-gradient(45deg, #fff 9.5%, #c30a 10.5%, #c30e 89.5%, #fff 90.5%) no-repeat;
+  background-size: 50% 60%, 85% 93%;
+  background-position: 20% 0%, 100% 100%;
+  border: 5px double #ddd;
+  height: 80vh;
   width: 1000px;
+  padding: 50px;
 }
 
 #cBody {
@@ -58,7 +85,7 @@ p { font-size: 2em; }
 
 .calcTop {
   background-color: #666;
-  padding: 15px 20px;
+  padding: 20px;
   border-radius: 20px 20px 0 0;
   height: 15%;
 }
@@ -66,9 +93,9 @@ p { font-size: 2em; }
 .display {
   background: linear-gradient(-70deg, #fff0 30%, #fffd 30%, #fffd 70%, #fff0 70%) no-repeat, linear-gradient(-70deg, #fff0 40%, #fffd 40%, #fffd 60%, #fff0 60%) no-repeat, linear-gradient(#fc9, #fc9) no-repeat;
   border-radius: 20px;
-  padding: 3px 5px 5px;
+  padding: 0 15px 5px;
   text-align: right;
-  height: 90%;
+  height: 98%;
   font-size: 3em;
   background-size: 13% 100%, 13% 100%, 100%;
   background-position: 10% 0%, 20% 0%, 100%;
