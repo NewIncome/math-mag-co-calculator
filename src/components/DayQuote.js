@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 const DayQuote = () => (
   <section className="section">
     <h2 className="title">Quote of the Day</h2>
