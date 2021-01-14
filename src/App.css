@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 * {
   box-sizing: border-box;
   font-family: 'Courier New', monospace;
@@ -5,7 +8,41 @@
   padding: 0;
 }
 
-#root {
+#nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 4em;
+}
+
+.links {
+  font-size: 1.6em;
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  align-items: center;
+}
+
+.link {
+  color: #005ce6;
+  font-weight: bold;
+}
+
+p,
+h2,
+blockquote {
+  font-family: 'Bitter', serif;
+}
+
+.title { font-size: 3em; }
+
+p { font-size: 2em; }
+
+#calcContainer {
   background: linear-gradient(#fff, #fff) no-repeat, linear-gradient(45deg, #fff 21%, #c30a 21%, #c30e 91%, #fff 91%) no-repeat;
   background-size: 50% 60%, 87% 95%;
   background-position: 20% 0%, 100% 0%;

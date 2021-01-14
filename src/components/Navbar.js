@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 
 const Navbar = () => (
-  <nav>
+  <nav id="nav">
     <div className="logo">Math Magicians</div>
-    <div>
-      <Link to="/">Home</Link>
+    <div className="links">
+      <Link to="/" className="link">Home</Link>
       <span> | </span>
-      <Link to="/calculator">Calculator</Link>
+      <Link to="/calculator" className="link">Calculator</Link>
       <span> | </span>
-      <Link to="/dayquote">Quote</Link>
+      <Link to="/dayquote" className="link">Quote</Link>
     </div>
   </nav>
 );
