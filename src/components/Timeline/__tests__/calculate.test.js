@@ -6,7 +6,7 @@ describe('Arithmetic functions', () => {
     const data = {
       total: 8,
       next: 10,
-      operation: '+'
+      operation: '+',
     };
     expect(calculate(data, '=').total).toBe('18');
   });
@@ -15,7 +15,7 @@ describe('Arithmetic functions', () => {
     const data = {
       total: 100,
       next: 30,
-      operation: '-'
+      operation: '-',
     };
     expect(calculate(data, '=').total).toBe('70');
   });
@@ -24,7 +24,7 @@ describe('Arithmetic functions', () => {
     const data = {
       total: 8,
       next: 10,
-      operation: 'X'
+      operation: 'X',
     };
     expect(calculate(data, '=').total).toBe('80');
   });
@@ -33,7 +33,7 @@ describe('Arithmetic functions', () => {
     const data = {
       total: 100,
       next: 20,
-      operation: '÷'
+      operation: '÷',
     };
     expect(calculate(data, '=').total).toBe('5');
   });
@@ -42,7 +42,7 @@ describe('Arithmetic functions', () => {
     const data = {
       total: null,
       next: 8,
-      operation: null
+      operation: null,
     };
     expect(calculate(data, '.').next).toBe('8.');
   });
@@ -51,7 +51,7 @@ describe('Arithmetic functions', () => {
     const data = {
       total: null,
       next: 8,
-      operation: null
+      operation: null,
     };
     expect(calculate(data, '%').next).toBe(0.08);
   });
