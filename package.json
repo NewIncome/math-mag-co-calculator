@@ -59,6 +59,7 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
+    "prettier": "2.2.1",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-csstree-validator": "^1.9.0",
@@ -70,5 +71,7 @@
       "\\.[jt]sx?$": "babel-jest"
     }
   },
-  "externals": { "react": "React" }
+  "externals": {
+    "react": "React"
+  }
 }

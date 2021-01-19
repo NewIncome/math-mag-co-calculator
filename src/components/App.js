@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../App.css';
-import Display from './Display';
-import ButtonPanel from './ButtonPanel';
 import Calculate from '../logic/calculate';
+import CalculatorPage from './CalculatorPage';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
 
@@ -31,22 +30,27 @@ class App extends React.Component {
     const { total, next } = this.state;
 
     return (
-      <section className="section1">
-        <p>Let&apos;s do some math!</p>
-        <div id="calcContainer">
-          <div id="cBody">
-            <div className="calcTop">
-              <Display result={
-                (total === null && next === null) ? '0' : next === null ? total : next
-                }
-              />
-            </div>
-            <div className="calcBtm">
-              <ButtonPanel onClick={this.handleClick} />
-            </div>
-          </div>
-        </div>
-      </section>
+      <CalculatorPage
+        total={total}
+        next={next}
+        handleClick={this.handleClick}
+      />
+      // <section className="section1">
+      //   <p>Let&apos;s do some math!</p>
+      //   <div id="calcContainer">
+      //     <div id="cBody">
+      //       <div className="calcTop">
+      //         <Display result={
+      //           (total === null && next === null) ? '0' : next === null ? total : next
+      //           }
+      //         />
+      //       </div>
+      //       <div className="calcBtm">
+      //         <ButtonPanel onClick={this.handleClick} />
+      //       </div>
+      //     </div>
+      //   </div>
+      // </section>
     );
   }
 }
